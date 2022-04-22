@@ -1,5 +1,5 @@
 export type ToDo = {
-    id? : string,
+    id : string,
     description : string,
-    status? : string;
+    status : string;
 }

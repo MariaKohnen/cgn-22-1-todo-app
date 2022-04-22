@@ -1,6 +1,9 @@
 import useToDo from "../hooks/useToDo";
-import ToDoOverview from "../components/ToDoOverview";
+import ToDoOpen from "../components/ToDoOpen";
 import CreateToDo from "../components/CreateToDo";
+import ToDoInProgress from "../components/ToDoInProgress";
+import ToDoDone from "../components/ToDoDone";
+import "./Homepage.css";
 
 export default function Homepage() {
 
@@ -8,10 +11,19 @@ export default function Homepage() {
 
     return (
         <div>
-            <div>
-            <h1>Hier kommt eine Übersicht</h1>
-                <CreateToDo addToDo={addToDo} />
-                <ToDoOverview toDoList={toDoList} />
+            <div id={"taskOverview"}>
+                <CreateToDo addToDo={addToDo}/>
+                <div id="taskGallery">
+                    <div>
+                        <ToDoOpen toDoList={toDoList}/>
+                    </div>
+                    <div>
+                        <ToDoInProgress toDoList={toDoList}/>
+                    </div>
+                    <div>
+                        <ToDoDone toDoList={toDoList}/>
+                    </div>
+                </div>
             </div>
         </div>
     )

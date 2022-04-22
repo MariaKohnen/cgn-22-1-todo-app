@@ -15,7 +15,6 @@ export default function CreateToDo({addToDo}: CreateToDoProps) {
 
     const handleSubmit = (event : FormEvent<HTMLFormElement> ) => {
         const newToDo = {id, description, status}
-        console.log(newToDo)
         event.preventDefault()
         postToDoByApi(newToDo)
             .then(response => addToDo(response))
@@ -26,7 +25,7 @@ export default function CreateToDo({addToDo}: CreateToDoProps) {
             <form className={"formAddToDo"} onSubmit={handleSubmit}>
                 <div>
                 <label>Beschreibung</label>
-                <input type="discription"
+                <input type="description"
                        required
                        value={description}
                        onChange={(handleChange) => setDescription(handleChange.target.value)}

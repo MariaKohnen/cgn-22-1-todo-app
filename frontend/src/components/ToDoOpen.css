@@ -1,13 +1,11 @@
-#ToDoOverview {
-    width: 30%;
-}
 
-#ToDoOverview > div {
+.ToDoOverview > div {
+    width: 400px;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
 }
 
-#ToDoOverview > h2 {
+.ToDoOverview > h2 {
     color: white;
 }
