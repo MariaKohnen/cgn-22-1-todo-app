@@ -1,4 +1,5 @@
 import {ToDo} from "../model/ToDo";
+import "./ToDoCard.css"
 
 type ToDoCardProps = {
     toDo : ToDo;
@@ -6,7 +7,7 @@ type ToDoCardProps = {
 
 export default function ToDoCard({toDo} : ToDoCardProps) {
     return (
-        <div>
+        <div id="toDoCard">
             <div>{toDo.description}</div>
             <div>{toDo.status}</div>
         </div>

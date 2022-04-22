@@ -1,0 +1,13 @@
+#ToDoOverview {
+    width: 30%;
+}
+
+#ToDoOverview > div {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+
+#ToDoOverview > h2 {
+    color: white;
+}

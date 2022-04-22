@@ -1,0 +1,23 @@
+#toDoCard {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 20px 0px 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#toDoCard >div {
+    align-self: stretch;
+    text-align: left;
+}
+
+#toDoCard> div:nth-child(odd) {
+    font-size: 1rem;
+}
+
+#toDoCard> div:nth-child(even) {
+    font-size: 0.8rem;
+    color: dimgrey;
+}

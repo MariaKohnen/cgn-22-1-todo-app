@@ -2,11 +2,12 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Homepage from "./pages/Homepage";
+import Title from "./components/Title";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <h1>Hier kommt der Titel</h1>
+      <Title />
       <Routes>
         <Route path={"/"} element={<Homepage />}/>
       </Routes>
