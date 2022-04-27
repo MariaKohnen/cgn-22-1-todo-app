@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '14'
       - name: Build Frontend
-        run:
+        run: |
          cd frontend
          npm install
          npm run build
