@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '14'
       - name: Build Frontend
-       run:
+        run:
          cd frontend
          npm install
          npm run build
@@ -60,10 +60,10 @@ jobs:
           name: app.jar
           path: backend/target
       - name: Login to Heroku
-       run: heroku container:login
+        run: heroku container:login
       - name: Push Docker Container
-       run: heroku container:push web -a todoappnf
+        run: heroku container:push web -a todoappnf
       - name: Release Docker Container
-       run: heroku container:release web -a todoappnf
+        run: heroku container:release web -a todoappnf
 
 
