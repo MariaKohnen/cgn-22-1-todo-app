@@ -18,6 +18,7 @@ export default function CreateToDo({addToDo}: CreateToDoProps) {
         event.preventDefault()
         postToDoByApi(newToDo)
             .then(response => addToDo(response))
+        setDescription('')
     }
 
     return (

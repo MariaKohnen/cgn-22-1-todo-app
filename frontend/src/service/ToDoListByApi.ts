@@ -14,7 +14,7 @@ export function postToDoByApi(newToDo : ToDo) {
 }
 
 export function putToDoByApi( toDo : ToDo) {
-    return axios.put("/api/todo/"+toDo.id, toDo)
+    return axios.put(`/api/todo/${toDo.id}`, toDo)
         .then(response => response.data)
         .catch(console.error)
 }
