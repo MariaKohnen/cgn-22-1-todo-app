@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      -name: Build Frontend
+      - name: Build Frontend
        run:
          cd frontend
          npm install
@@ -59,11 +59,11 @@ jobs:
         with:
           name: app.jar
           path: backend/target
-      -name: Login to Heroku
+      - name: Login to Heroku
        run: heroku container:login
-      -name: Push Docker Container
+      - name: Push Docker Container
        run: heroku container:push web -a todoappnf
-      -name: Release Docker Container
+      - name: Release Docker Container
        run: heroku container:release web -a todoappnf
 
 
